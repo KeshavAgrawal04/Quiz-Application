@@ -446,13 +446,11 @@ function addHover() {
 
 // (🔥) Function To Display Questions And Options
 function showQuestionsAndOptions() {
-    setTimeout(() => {
-        questionE.innerHTML = questions[questionCount].question;
-        for (let i = 0; i <= labels.length - 1; i++) {
-            labels[i].innerHTML = questions[questionCount].answers[i];
-        }
-        numbers.innerHTML = `${questionCount + 1} of ${totalQuestions}`;
-    }, 500)
+    questionE.innerHTML = questions[questionCount].question;
+    for (let i = 0; i <= labels.length - 1; i++) {
+        labels[i].innerHTML = questions[questionCount].answers[i];
+    }
+    numbers.innerHTML = `${questionCount + 1} of ${totalQuestions}`;
 }
 
 // (🔥) PreviousQuestion For Arrow
