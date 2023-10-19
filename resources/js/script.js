@@ -2,321 +2,321 @@ const user = {
     name: "Demo Name"
 };
 
-const setA = [
-    {
-        question: "What is JavaScript?",
-        answers: [
-            "A type of coffee",
-            "A programming language",
-            "A tool for creating animations",
-            "A web browser"
-        ],
-        answer: "A programming language",
-    },
-    {
-        question: "How do you declare a variable in JavaScript?",
-        answers: [
-            "Using the 'var' keyword",
-            "Using the 'let' keyword",
-            "Using the 'const' keyword",
-            "All of the above"
-        ],
-        answer: "All of the above"
-    },
-    {
-        question: "What is the data type of '42' in JavaScript?",
-        answers: [
-            "Number",
-            "String",
-            "Boolean",
-            "Undefined"
-        ],
-        answer: "String"
-    },
-    {
-        question: "What is the result of adding a number and a string in JavaScript?",
-        answers: [
-            "An error",
-            "A concatenated string",
-            "The string is converted to a number",
-            "The number is converted to a string"
-        ],
-        answer: "A concatenated string"
-    },
-    {
-        question: "What is the purpose of comments in JavaScript?",
-        answers: [
-            "To make the code look colorful",
-            "To add notes for other developers",
-            "To prevent code execution",
-            "To create new variables"
-        ],
-        answer: "To prevent code execution"
-    },
-    {
-        question: "What is the operator for addition in JavaScript?",
-        answers: [
-            "+",
-            "-",
-            "*",
-            "/"
-        ],
-        answer: "+"
-    },
-    {
-        question: "What is the result of '5' + '5' in JavaScript?",
-        answers: [
-            "10",
-            "55",
-            "5 (as a string)",
-            "Syntax error"
-        ],
-        answer: "5 (as a string)"
-    },
-    {
-        question: "What is the operator for equality comparison in JavaScript?",
-        answers: [
-            "==",
-            "===",
-            "!=",
-            "!=="
-        ],
-        answer: "==="
-    },
-    {
-        question: "What does the '&&' operator do in JavaScript?",
-        answers: [
-            "Logical AND",
-            "Logical OR",
-            "Bitwise AND",
-            "Bitwise OR"
-        ],
-        answer: "Logical AND"
-    },
-    {
-        question: "What is the result of 'true && false' in JavaScript?",
-        answers: [
-            "true",
-            "false",
-            "Syntax error",
-            "NaN"
-        ],
-        answer: "false"
-    }
-];
-
-const setB = [
-    {
-        question: "What is a variable in JavaScript?",
-        answers: [
-            "A reserved word in JavaScript",
-            "A container for storing data values",
-            "A way to perform mathematical calculations",
-            "A type of function"
-        ],
-        answer: "A container for storing data values"
-    },
-    {
-        question: "Which keyword is used to declare a variable in JavaScript?",
-        answers: [
-            "var",
-            "let",
-            "const",
-            "variable"
-        ],
-        answer: "var"
-    },
-    {
-        question: "What is the difference between 'let' and 'const' for variable declaration?",
-        answers: [
-            "There is no difference",
-            "'let' can be reassigned, but 'const' cannot",
-            "'const' can be reassigned, but 'let' cannot",
-            "Both cannot be reassigned"
-        ],
-        answer: "'let' can be reassigned, but 'const' cannot"
-    },
-    {
-        question: "What is the scope of a variable declared with 'var'?",
-        answers: [
-            "Global scope",
-            "Function scope",
-            "Block scope",
-            "Local scope"
-        ],
-        answer: "Global scope"
-    },
-    {
-        question: "What is a block-scoped variable declaration in JavaScript?",
-        answers: [
-            "A variable declared with 'var'",
-            "A variable declared with 'let' or 'const'",
-            "A variable declared with 'function'",
-            "A variable declared with 'block'"
-        ],
-        answer: "A variable declared with 'let' or 'const'"
-    },
-    {
-        question: "What is the keyword used to declare a variable with block scope?",
-        answers: [
-            "var",
-            "let",
-            "const",
-            "block"
-        ],
-        answer: "let"
-    },
-    {
-        question: "Which keyword is used to declare a constant variable in JavaScript?",
-        answers: [
-            "var",
-            "let",
-            "const",
-            "constant"
-        ],
-        answer: "const"
-    },
-    {
-        question: "What happens if you declare a variable without initializing it?",
-        answers: [
-            "It is automatically assigned 'undefined'",
-            "It results in a syntax error",
-            "It remains uninitialized",
-            "It is assigned a random value"
-        ],
-        answer: "It is automatically assigned 'undefined'"
-    },
-    {
-        question: "What are valid variable names in JavaScript?",
-        answers: [
-            "Any sequence of characters",
-            "Names starting with a number",
-            "Names containing spaces",
-            "Names starting with a letter, underscore, or dollar"
-        ],
-        answer: "Names starting with a letter, underscore, or dollar"
-    },
-    {
-        question: "What is the purpose of the 'let' keyword in modern JavaScript?",
-        answers: [
-            "To declare a variable with block scope",
-            "To declare a variable with global scope",
-            "To declare a variable with function scope",
-            "To declare a constant variable"
-        ],
-        answer: "To declare a variable with block scope"
-    }
-];
-
-const setC = [
-    {
-        question: "What is a function in JavaScript?",
-        answers: [
-            "A reserved word in JavaScript",
-            "A container for storing data values",
-            "A block of code that performs a specific task",
-            "A type of loop"
-        ],
-        answer: "A block of code that performs a specific task"
-    },
-    {
-        question: "How do you declare a function in JavaScript?",
-        answers: [
-            "Using the 'func' keyword",
-            "Using the 'function' keyword",
-            "Using the 'def' keyword",
-            "Using the 'fn' keyword"
-        ],
-        answer: "Using the 'function' keyword"
-    },
-    {
-        question: "What is the purpose of parameters in a function?",
-        answers: [
-            "To store global variables",
-            "To specify the return type of the function",
-            "To define values that the function can accept",
-            "To limit the function's access to variables"
-        ],
-        answer: "To define values that the function can accept"
-    },
-    {
-        question: "What is a return statement in a JavaScript function used for?",
-        answers: [
-            "To terminate the function's execution",
-            "To specify the function's name",
-            "To indicate the function's parameters",
-            "To return a value from the function"
-        ],
-        answer: "To return a value from the function"
-    },
-    {
-        question: "What is a function expression in JavaScript?",
-        answers: [
-            "A function that expresses its feelings",
-            "A function defined as a variable assignment",
-            "A function defined using 'function' keyword",
-            "A built-in JavaScript function"
-        ],
-        answer: "A function defined as a variable assignment"
-    },
-    {
-        question: "What is the scope of a variable declared inside a function?",
-        answers: [
-            "Global scope",
-            "Function scope",
-            "Block scope",
-            "Local scope"
-        ],
-        answer: "Function scope"
-    },
-    {
-        question: "What is a closure in JavaScript?",
-        answers: [
-            "A way to lock variables",
-            "A function has access to its outer function's scope",
-            "A built-in JavaScript function",
-            "A way to define global variables"
-        ],
-        answer: "A function has access to its outer function's scope"
-    },
-    {
-        question: "What does the 'this' keyword refer to in a JavaScript function?",
-        answers: [
-            "The current function",
-            "The global object",
-            "The parent function",
-            "The object that owns the function"
-        ],
-        answer: "The object that owns the function"
-    },
-    {
-        question: "How can you make a function accept a variable number of arguments in JavaScript?",
-        answers: [
-            "By using the 'arguments' keyword",
-            "By using a loop",
-            "By using the 'varargs' keyword",
-            "By declaring a fixed number of parameters"
-        ],
-        answer: "By using the 'arguments' keyword"
-    },
-    {
-        question: "Which keyword is used to declare a constant variable in JavaScript?",
-        answers: [
-            "var",
-            "let",
-            "const",
-            "constant"
-        ],
-        answer: "const"
-    },
-];
+const questionSets = {
+    'A': [
+        {
+            question: "What is JavaScript?",
+            answers: [
+                "A type of coffee",
+                "A programming language",
+                "A tool for creating animations",
+                "A web browser"
+            ],
+            answer: "A programming language",
+        },
+        {
+            question: "How do you declare a variable in JavaScript?",
+            answers: [
+                "Using the 'var' keyword",
+                "Using the 'let' keyword",
+                "Using the 'const' keyword",
+                "All of the above"
+            ],
+            answer: "All of the above"
+        },
+        {
+            question: "What is the data type of '42' in JavaScript?",
+            answers: [
+                "Number",
+                "String",
+                "Boolean",
+                "Undefined"
+            ],
+            answer: "String"
+        },
+        {
+            question: "What is the result of adding a number and a string in JavaScript?",
+            answers: [
+                "An error",
+                "A concatenated string",
+                "The string is converted to a number",
+                "The number is converted to a string"
+            ],
+            answer: "A concatenated string"
+        },
+        {
+            question: "What is the purpose of comments in JavaScript?",
+            answers: [
+                "To make the code look colorful",
+                "To add notes for other developers",
+                "To prevent code execution",
+                "To create new variables"
+            ],
+            answer: "To prevent code execution"
+        },
+        {
+            question: "What is the operator for addition in JavaScript?",
+            answers: [
+                "+",
+                "-",
+                "*",
+                "/"
+            ],
+            answer: "+"
+        },
+        {
+            question: "What is the result of '5' + '5' in JavaScript?",
+            answers: [
+                "10",
+                "55",
+                "5 (as a string)",
+                "Syntax error"
+            ],
+            answer: "5 (as a string)"
+        },
+        {
+            question: "What is the operator for equality comparison in JavaScript?",
+            answers: [
+                "==",
+                "===",
+                "!=",
+                "!=="
+            ],
+            answer: "==="
+        },
+        {
+            question: "What does the '&&' operator do in JavaScript?",
+            answers: [
+                "Logical AND",
+                "Logical OR",
+                "Bitwise AND",
+                "Bitwise OR"
+            ],
+            answer: "Logical AND"
+        },
+        {
+            question: "What is the result of 'true && false' in JavaScript?",
+            answers: [
+                "true",
+                "false",
+                "Syntax error",
+                "NaN"
+            ],
+            answer: "false"
+        }
+    ],
+    'B': [
+        {
+            question: "What is a variable in JavaScript?",
+            answers: [
+                "A reserved word in JavaScript",
+                "A container for storing data values",
+                "A way to perform mathematical calculations",
+                "A type of function"
+            ],
+            answer: "A container for storing data values"
+        },
+        {
+            question: "Which keyword is used to declare a variable in JavaScript?",
+            answers: [
+                "var",
+                "let",
+                "const",
+                "variable"
+            ],
+            answer: "var"
+        },
+        {
+            question: "What is the difference between 'let' and 'const' for variable declaration?",
+            answers: [
+                "There is no difference",
+                "'let' can be reassigned, but 'const' cannot",
+                "'const' can be reassigned, but 'let' cannot",
+                "Both cannot be reassigned"
+            ],
+            answer: "'let' can be reassigned, but 'const' cannot"
+        },
+        {
+            question: "What is the scope of a variable declared with 'var'?",
+            answers: [
+                "Global scope",
+                "Function scope",
+                "Block scope",
+                "Local scope"
+            ],
+            answer: "Global scope"
+        },
+        {
+            question: "What is a block-scoped variable declaration in JavaScript?",
+            answers: [
+                "A variable declared with 'var'",
+                "A variable declared with 'let' or 'const'",
+                "A variable declared with 'function'",
+                "A variable declared with 'block'"
+            ],
+            answer: "A variable declared with 'let' or 'const'"
+        },
+        {
+            question: "What is the keyword used to declare a variable with block scope?",
+            answers: [
+                "var",
+                "let",
+                "const",
+                "block"
+            ],
+            answer: "let"
+        },
+        {
+            question: "Which keyword is used to declare a constant variable in JavaScript?",
+            answers: [
+                "var",
+                "let",
+                "const",
+                "constant"
+            ],
+            answer: "const"
+        },
+        {
+            question: "What happens if you declare a variable without initializing it?",
+            answers: [
+                "It is automatically assigned 'undefined'",
+                "It results in a syntax error",
+                "It remains uninitialized",
+                "It is assigned a random value"
+            ],
+            answer: "It is automatically assigned 'undefined'"
+        },
+        {
+            question: "What are valid variable names in JavaScript?",
+            answers: [
+                "Any sequence of characters",
+                "Names starting with a number",
+                "Names containing spaces",
+                "Names starting with a letter, underscore, or dollar"
+            ],
+            answer: "Names starting with a letter, underscore, or dollar"
+        },
+        {
+            question: "What is the purpose of the 'let' keyword in modern JavaScript?",
+            answers: [
+                "To declare a variable with block scope",
+                "To declare a variable with global scope",
+                "To declare a variable with function scope",
+                "To declare a constant variable"
+            ],
+            answer: "To declare a variable with block scope"
+        }
+    ],
+    'C': [
+        {
+            question: "What is a function in JavaScript?",
+            answers: [
+                "A reserved word in JavaScript",
+                "A container for storing data values",
+                "A block of code that performs a specific task",
+                "A type of loop"
+            ],
+            answer: "A block of code that performs a specific task"
+        },
+        {
+            question: "How do you declare a function in JavaScript?",
+            answers: [
+                "Using the 'func' keyword",
+                "Using the 'function' keyword",
+                "Using the 'def' keyword",
+                "Using the 'fn' keyword"
+            ],
+            answer: "Using the 'function' keyword"
+        },
+        {
+            question: "What is the purpose of parameters in a function?",
+            answers: [
+                "To store global variables",
+                "To specify the return type of the function",
+                "To define values that the function can accept",
+                "To limit the function's access to variables"
+            ],
+            answer: "To define values that the function can accept"
+        },
+        {
+            question: "What is a return statement in a JavaScript function used for?",
+            answers: [
+                "To terminate the function's execution",
+                "To specify the function's name",
+                "To indicate the function's parameters",
+                "To return a value from the function"
+            ],
+            answer: "To return a value from the function"
+        },
+        {
+            question: "What is a function expression in JavaScript?",
+            answers: [
+                "A function that expresses its feelings",
+                "A function defined as a variable assignment",
+                "A function defined using 'function' keyword",
+                "A built-in JavaScript function"
+            ],
+            answer: "A function defined as a variable assignment"
+        },
+        {
+            question: "What is the scope of a variable declared inside a function?",
+            answers: [
+                "Global scope",
+                "Function scope",
+                "Block scope",
+                "Local scope"
+            ],
+            answer: "Function scope"
+        },
+        {
+            question: "What is a closure in JavaScript?",
+            answers: [
+                "A way to lock variables",
+                "A function has access to its outer function's scope",
+                "A built-in JavaScript function",
+                "A way to define global variables"
+            ],
+            answer: "A function has access to its outer function's scope"
+        },
+        {
+            question: "What does the 'this' keyword refer to in a JavaScript function?",
+            answers: [
+                "The current function",
+                "The global object",
+                "The parent function",
+                "The object that owns the function"
+            ],
+            answer: "The object that owns the function"
+        },
+        {
+            question: "How can you make a function accept a variable number of arguments in JavaScript?",
+            answers: [
+                "By using the 'arguments' keyword",
+                "By using a loop",
+                "By using the 'varargs' keyword",
+                "By declaring a fixed number of parameters"
+            ],
+            answer: "By using the 'arguments' keyword"
+        },
+        {
+            question: "Which keyword is used to declare a constant variable in JavaScript?",
+            answers: [
+                "var",
+                "let",
+                "const",
+                "constant"
+            ],
+            answer: "const"
+        },
+    ]
+}
 
 let interactionDiv = document.getElementById('interaction-div');
 let quetionsDiv = document.getElementById('questions-div');
 let resultDiv = document.getElementById('result-div');
 
 let sets = document.querySelectorAll('#sets ul li');
-let setsi = document.querySelectorAll('#sets ul li i');
+let setIcons = document.querySelectorAll('#sets ul li i');
 let userName = document.getElementById('fullName');
 let startQuizBtn = document.getElementById('start-quiz-btn')
 let progressBar = document.getElementById('progress-bar');
@@ -346,14 +346,14 @@ let indicators = document.getElementsByClassName('indicators')[0];
 let indicators_2 = document.getElementsByClassName('indicators-2')[0];
 
 let setsArray = Array.from(sets);
-let setsiArray = Array.from(setsi);
+let setIconsArray = Array.from(setIcons);
 let optionArray = Array.from(option);
 
 let questions;
 let questionCount = 0;
 let questionStart = 0;
 let reviewQuestionsNumber = 0;
-let tempForRev = 0;
+let tempForReview = 0;
 let reviewTemp = 0;
 let totalQuestions = 0;
 let newArray = [];
@@ -366,9 +366,12 @@ startQuizBtn.addEventListener('click', (e) => {
         user.name = userName.value;
         interactionDiv.style.display = 'none';
         quetionsDiv.style.display = 'flex';
-        (user.set == 'A') ? questions = setA : false;
-        (user.set == 'B') ? questions = setB : false;
-        (user.set == 'C') ? questions = setC : false;
+        for (let key in questionSets) {
+            (user.set == key) ? questions = questionSets[key] : false;
+        }
+        // (user.set == 'A') ? questions = setA : false;
+        // (user.set == 'B') ? questions = setB : false;
+        // (user.set == 'C') ? questions = setC : false;
         totalQuestions = questions.length;
         shuffleArray();
         startQuiz();
@@ -379,7 +382,7 @@ startQuizBtn.addEventListener('click', (e) => {
 setsArray.forEach(item => {
     item.addEventListener('click', (e) => {
         let i = e.target;
-        setsiArray.forEach(item => {
+        setIconsArray.forEach(item => {
             if (item.classList.contains('selected')) {
                 item.classList.remove('selected');
             }
@@ -677,7 +680,7 @@ yes.addEventListener('click', (e) => {
     for (let key of questions) {
         if (key.review) {
             newArray.push(key);
-            tempForRev++;
+            tempForReview++;
         }
     }
 
@@ -715,35 +718,36 @@ no.addEventListener('click', (e) => {
     result();
 });
 
-// (🔥) Review Questions Answering
+// (🔥) Review Questions AnsweringU
 function reviewQuestions() {
     alert.style.display = 'flex';
 
     reviewCheck.style.display = 'none';
     progressBar.style.display = 'none';
     numbers.style.display = 'none';
-    tempForRev = 0;
+    tempForReview = 0;
     newArray = [];
     reviewQuestionsNumber = 0;
 }
 
 // (🔥) Submit Quiz Function
 function submitQuiz() {
-    let tempForRev = 0;
+    let tempForReviewLocal = 0;
     questionStart = 0;
     reviewQuestionsNumber = 0;
 
     for (let key of questions) {
         if (key.review) {
-            tempForRev++;
+            tempForReviewLocal++;
         }
+        delete key.review;
     }
 
     removeClasses();
 
-    reviewQuestionNumber.innerHTML = `${tempForRev} Questions Are On Review !`;
+    reviewQuestionNumber.innerHTML = `${tempForReviewLocal} Questions Are On Review !`;
 
-    (tempForRev >= 1) ? reviewQuestions() : result();
+    (tempForReviewLocal >= 1) ? reviewQuestions() : result();
 }
 
 // (4) Try Again Function
@@ -783,6 +787,9 @@ function tryAgainQuiz() {
 
     userName.value = user.name;
     userName.disabled = true;
+
+    // submitBtn.innerHTML = "Submit";
+    // submitBtn.setAttribute('onClick', 'submitQuiz()');
 
     for (let key of questions) {
         delete key.userAns;
