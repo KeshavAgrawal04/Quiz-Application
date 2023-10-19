@@ -784,9 +784,6 @@ function tryAgainQuiz() {
     userName.value = user.name;
     userName.disabled = true;
 
-    // submitBtn.innerHTML = "Submit";
-    // submitBtn.setAttribute('onClick', 'submitQuiz()');
-
     for (let key of questions) {
         delete key.userAns;
         delete key.review;
