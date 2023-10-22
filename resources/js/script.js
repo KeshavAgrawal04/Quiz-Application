@@ -315,8 +315,8 @@ let interactionDiv = document.getElementById('interaction-div');
 let quetionsDiv = document.getElementById('questions-div');
 let resultDiv = document.getElementById('result-div');
 
-let sets = document.querySelectorAll('#sets ul li');
-let setIcons = document.querySelectorAll('#sets ul li i');
+let sets = document.querySelectorAll('#sets .set-btn');
+
 let userName = document.getElementById('fullName');
 let startQuizBtn = document.getElementById('start-quiz-btn')
 let progressBar = document.getElementById('progress-bar');
@@ -346,7 +346,7 @@ let indicators = document.getElementsByClassName('indicators')[0];
 let indicators_2 = document.getElementsByClassName('indicators-2')[0];
 
 let setsArray = Array.from(sets);
-let setIconsArray = Array.from(setIcons);
+// let setIconsArray = Array.from(setIcons);
 let optionArray = Array.from(option);
 
 let questions;
@@ -381,14 +381,14 @@ startQuizBtn.addEventListener('click', (e) => {
 // (🔥) Set Selection
 setsArray.forEach(item => {
     item.addEventListener('click', (e) => {
-        let i = e.target;
-        setIconsArray.forEach(item => {
+        setsArray.forEach(item => {
             if (item.classList.contains('selected')) {
                 item.classList.remove('selected');
             }
-        })
-        i.classList.toggle('selected');
-        user.set = i.id;
+        });
+        console.log(item.innerHTML);
+        item.classList.toggle('selected');
+        user.set = item.innerHTML;
     });
 });
 
@@ -562,7 +562,7 @@ function reviewPreviousQuestion() {
 
         unCheck();
 
-        if (newArray[questionStart].userAns != undefined) {
+        if (newArray[questionStart]?.userAns != undefined) {
             optionArray[newArray[questionStart].userAns - 1].firstElementChild.checked = true;
         }
 
@@ -614,7 +614,7 @@ function reviewNextQuestion() {
 
         unCheck();
 
-        if (newArray[questionStart].userAns != undefined) {
+        if (newArray[questionStart]?.userAns != undefined) {
             optionArray[newArray[questionStart].userAns - 1].firstElementChild.checked = true;
         }
 
@@ -682,13 +682,14 @@ yes.addEventListener('click', (e) => {
             newArray.push(key);
             tempForReview++;
         }
+        delete key.review;
     }
 
     reviewQuestionsNumber = newArray.length;
 
     unCheck();
 
-    if (newArray[questionStart].userAns != undefined) {
+    if (newArray[questionStart]?.userAns != undefined) {
         optionArray[newArray[questionStart].userAns - 1].firstElementChild.checked = true;
     }
 
@@ -740,7 +741,6 @@ function submitQuiz() {
         if (key.review) {
             tempForReviewLocal++;
         }
-        delete key.review;
     }
 
     removeClasses();
