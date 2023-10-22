@@ -323,6 +323,7 @@ let progressBar = document.getElementById('progress-bar');
 let questionE = document.getElementById('question');
 let element = document.getElementsByName('check');
 let numbers = document.getElementById('numbers');
+let time = document.getElementById('time');
 let option = document.getElementsByClassName('option');
 let submitBtn = document.getElementById('submit-btn');
 let preview = document.getElementById('preview');
@@ -357,6 +358,7 @@ let tempForReview = 0;
 let reviewTemp = 0;
 let totalQuestions = 0;
 let newArray = [];
+let second = 59;
 
 // (🔥) Start Quiz Button From Interaction Page
 startQuizBtn.addEventListener('click', (e) => {
@@ -374,6 +376,15 @@ startQuizBtn.addEventListener('click', (e) => {
         // (user.set == 'C') ? questions = setC : false;
         totalQuestions = questions.length;
         shuffleArray();
+        // let timeInterval = setInterval((e) => {
+        //     time.innerHTML = `${second}`;
+        //     second--;
+        //     if (second <= -1) {
+        //         clearInterval(timeInterval);
+        //         time.style.display = 'none';
+        //         submitQuiz();
+        //     }
+        // }, 1000)
         startQuiz();
     }
 });
@@ -753,6 +764,9 @@ function submitQuiz() {
 // (4) Try Again Function
 function tryAgainQuiz() {
     shuffleArray();
+    // second = 59;
+    // time.style.display = 'block';
+    // time.innerHTML = '60';
     indicators.style.display = 'flex';
     indicators_2.style.display = 'none';
     reviewCheck.style.display = 'block';
