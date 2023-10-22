@@ -315,14 +315,15 @@ let interactionDiv = document.getElementById('interaction-div');
 let quetionsDiv = document.getElementById('questions-div');
 let resultDiv = document.getElementById('result-div');
 
-let sets = document.querySelectorAll('#sets ul li');
-let setIcons = document.querySelectorAll('#sets ul li i');
+let sets = document.querySelectorAll('#sets .set-btn');
+
 let userName = document.getElementById('fullName');
 let startQuizBtn = document.getElementById('start-quiz-btn')
 let progressBar = document.getElementById('progress-bar');
 let questionE = document.getElementById('question');
 let element = document.getElementsByName('check');
 let numbers = document.getElementById('numbers');
+let time = document.getElementById('time');
 let option = document.getElementsByClassName('option');
 let submitBtn = document.getElementById('submit-btn');
 let preview = document.getElementById('preview');
@@ -346,7 +347,7 @@ let indicators = document.getElementsByClassName('indicators')[0];
 let indicators_2 = document.getElementsByClassName('indicators-2')[0];
 
 let setsArray = Array.from(sets);
-let setIconsArray = Array.from(setIcons);
+// let setIconsArray = Array.from(setIcons);
 let optionArray = Array.from(option);
 
 let questions;
@@ -357,6 +358,7 @@ let tempForReview = 0;
 let reviewTemp = 0;
 let totalQuestions = 0;
 let newArray = [];
+let second = 59;
 
 // (🔥) Start Quiz Button From Interaction Page
 startQuizBtn.addEventListener('click', (e) => {
@@ -374,6 +376,15 @@ startQuizBtn.addEventListener('click', (e) => {
         // (user.set == 'C') ? questions = setC : false;
         totalQuestions = questions.length;
         shuffleArray();
+        // let timeInterval = setInterval((e) => {
+        //     time.innerHTML = `${second}`;
+        //     second--;
+        //     if (second <= -1) {
+        //         clearInterval(timeInterval);
+        //         time.style.display = 'none';
+        //         submitQuiz();
+        //     }
+        // }, 1000)
         startQuiz();
     }
 });
@@ -381,14 +392,14 @@ startQuizBtn.addEventListener('click', (e) => {
 // (🔥) Set Selection
 setsArray.forEach(item => {
     item.addEventListener('click', (e) => {
-        let i = e.target;
-        setIconsArray.forEach(item => {
+        setsArray.forEach(item => {
             if (item.classList.contains('selected')) {
                 item.classList.remove('selected');
             }
-        })
-        i.classList.toggle('selected');
-        user.set = i.id;
+        });
+        console.log(item.innerHTML);
+        item.classList.toggle('selected');
+        user.set = item.innerHTML;
     });
 });
 
@@ -562,7 +573,7 @@ function reviewPreviousQuestion() {
 
         unCheck();
 
-        if (newArray[questionStart].userAns != undefined) {
+        if (newArray[questionStart]?.userAns != undefined) {
             optionArray[newArray[questionStart].userAns - 1].firstElementChild.checked = true;
         }
 
@@ -614,7 +625,7 @@ function reviewNextQuestion() {
 
         unCheck();
 
-        if (newArray[questionStart].userAns != undefined) {
+        if (newArray[questionStart]?.userAns != undefined) {
             optionArray[newArray[questionStart].userAns - 1].firstElementChild.checked = true;
         }
 
@@ -682,13 +693,14 @@ yes.addEventListener('click', (e) => {
             newArray.push(key);
             tempForReview++;
         }
+        delete key.review;
     }
 
     reviewQuestionsNumber = newArray.length;
 
     unCheck();
 
-    if (newArray[questionStart].userAns != undefined) {
+    if (newArray[questionStart]?.userAns != undefined) {
         optionArray[newArray[questionStart].userAns - 1].firstElementChild.checked = true;
     }
 
@@ -740,7 +752,6 @@ function submitQuiz() {
         if (key.review) {
             tempForReviewLocal++;
         }
-        delete key.review;
     }
 
     removeClasses();
@@ -753,6 +764,9 @@ function submitQuiz() {
 // (4) Try Again Function
 function tryAgainQuiz() {
     shuffleArray();
+    // second = 59;
+    // time.style.display = 'block';
+    // time.innerHTML = '60';
     indicators.style.display = 'flex';
     indicators_2.style.display = 'none';
     reviewCheck.style.display = 'block';

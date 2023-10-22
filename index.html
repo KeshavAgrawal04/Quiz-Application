@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz</title>
-    <link rel="shortcut icon" href="resources/images/quiz.png" type="image/x-icon">
-    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="shortcut icon" href="./resources/images/quiz.png" type="image/x-icon">
+    <link rel="stylesheet" href="./resources/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -18,7 +18,7 @@
     <div class="container-div" id="interaction-div">
         <div class="header">
             <div class="img">
-                <img src="resources/images/icon.gif" alt="icon" width="100px">
+                <img src="./resources/images/icon.gif" alt="icon" width="100px">
             </div>
             <div class="heading">
                 <h1>JavaScript Quiz</h1>
@@ -34,9 +34,9 @@
         <div id="sets">
             <p>Select An Question Set</p>
             <ul>
-                <li><i class="fa-solid fa-a" id="A"></i></li>
-                <li><i class="fa-solid fa-b" id="B"></i></li>
-                <li><i class="fa-solid fa-c" id="C"></i></li>
+                <button class="set-btn">A</button>
+                <button class="set-btn">B</button>
+                <button class="set-btn">C</button>
             </ul>
         </div>
 
@@ -52,7 +52,7 @@
     <div class="container-div" id="questions-div">
         <div class="header">
             <div class="img">
-                <img src="resources/images/icon.gif" alt="icon" width="100px">
+                <img src="./resources/images/icon.gif" alt="icon" width="100px">
             </div>
             <div class="heading">
                 <h1>JavaScript Quiz</h1>
@@ -88,7 +88,7 @@
             </div>
 
             <div id="alert">
-                <img src="resources/images/alert.gif" alt="alert" width="100px">
+                <img src="./resources/images/alert.gif" alt="alert" width="100px">
                 <h3 id="review-questions-number"></h3>
                 <h4>Do You Want To Review Them ?</h4>
                 <div id="btn-div">
@@ -100,7 +100,7 @@
 
         <div class="question-buttons">
             <button id="previous-arrow" onclick="previousQuestion()" class="q" style="border-radius: 20px;">
-                <img id="prevImg" src="resources/images/previous.png" alt="Previous" width="40px">
+                <img id="prevImg" src="./resources/images/previous.png" alt="Previous" width="40px">
             </button>
 
             <button class="q q-btn" onclick="next(this)">1</button>
@@ -115,7 +115,7 @@
             <button class="q q-btn" onclick="next(this)">10</button>
 
             <button id="next-arrow" onclick="nextQuestion()" class="q" style="border-radius: 20px;">
-                <img id="nextImg" src="resources/images/next.png" alt="Next" width="40px">
+                <img id="nextImg" src="./resources/images/next.png" alt="Next" width="40px">
             </button>
         </div>
 
@@ -130,6 +130,8 @@
 
             <button class="btn" id="submit-btn" onclick="submitQuiz()"
                 style="padding-left: 32px;padding-right: 32px;">Submit</button>
+
+            <p id="time" style="font-weight: bold;width: 50px;">60</p>
         </div>
 
         <div class="indicators" style="display: flex;justify-content: space-evenly;vertical-align: center;">
@@ -177,7 +179,7 @@
         </div>
 
         <div class="res-img">
-            <img src="resources/images/result.gif" alt="icon" width="100px">
+            <img src="./resources/images/result.gif" alt="icon" width="100px">
         </div>
 
         <div>
@@ -203,7 +205,7 @@
     <!-- 🔥 Result Div End 🔥 -->
 
     <!-- 🔥 JavaScript File To Handle User Interaction 🔥 -->
-    <script src="resources/js/script.js"></script>
+    <script src="./resources/js/script.js"></script>
 </body>
 
 </html>
